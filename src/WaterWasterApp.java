@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class WaterWasteApp {
+public class WaterWasterApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         // We are going for an interactive quiz mode boys!!
@@ -54,32 +54,31 @@ public class WaterWasteApp {
             // Industrial Waste Data: After some searches on Google, I settled for these values
             IndustrialWater industrial = new IndustrialWater(0); // Now I can just add value to it
             industrial.addProcessWaste(1); // Example of it working
-            industrial.addProcessWaste(500-1);  // Actual value this time lmao (minus 1 just in case)
+            industrial.addProcessWaste(19178082191.0-1);  // Actual value this time lmao (minus 1 just in case)
             industrial.calculateWaste();
 
             // Comparison made using the gets on a calculator and addressing it to each percentage.
             WasteCalculator calculator = new WasteCalculator();
             double percentage = calculator.compareWaste(individual.getWaterAmount(), industrial.getWaterAmount());
-
             // Reporting...
             System.out.println("\n--- Waste Report ---");
             System.out.println(individual);
             System.out.println(industrial);
-            System.out.println("Your waste makes up " + String.format("%.2f", percentage) + "% of industrial waste.");
-
+            System.out.println("Your waste makes up " + String.format("%.2f", percentage) + "% of the daily total waste.");
             // It's yapping time lol
-            System.out.println("Worldwide, agriculture alone consumes 70% of the world's freshwater, while households account for around 10%");
-            System.out.println("In Brazil alone, we use up to 7 trillion liters annually on agriculture");
-            System.out.println("Sure, we use that to make food. But have you ever considered how much is wasted?");
-            System.out.println("Cassava(Mandioca)? 216% goes to the trash. Corn? 109%. Soy? That one that they burn our forest for? 150%");
-            System.out.println("All this food, that could be used to save people on the street, going into the trash for not being pretty enough");
-            System.out.println("And we didn't even talk about half of the water used being wasted by lack of maintenance on pipes and water supplies.");
-            System.out.println("And as an extra, now that water is full of poisonous fluids. And it's going back to you...");
-            System.out.println("Taking that 5 min bath ain't gonna do shit. Get up and support some actual causes before it's over");
+            System.out.println("\n\nWorldwide, agriculture alone consumes 70% of the world's freshwater, while households account for around 10%");
+            System.out.println("\nIn Brazil alone, we use up to 7 trillion liters annually, 19 billions per day on agriculture");
+            System.out.println("\nCan you even imagine how much water is that? Here in Brazil, half of the water consumption is for the population, the other half is the industry.");
+            System.out.println("\nSure, we use that to make food. But have you ever considered how much is wasted?");
+            System.out.println("\nCassava(Mandioca)? 216% goes to the trash. Corn? 109%. Soy? That one that they burn our forest for? 150%");
+            System.out.println("\nAll this food, that could be used to save people on the street, going into the trash for not being pretty enough");
+            System.out.println("\nAnd we didn't even talk about half of the water used being wasted by lack of maintenance on pipes and water supplies.");
+            System.out.println("\nAnd as an extra, now that water is full of poisonous fluids. And it's going back to you...");
+            System.out.println("\nTaking that 5 min bath ain't gonna do shit. Get up and support some actual causes before it's over");
         } catch (InvalidWasteException e) {
-            System.err.println("Validation Error: " + e.getMessage());
+            System.err.println("\nValidation Error: " + e.getMessage());
         } catch (ComparisonException e) {
-            System.err.println("Comparison Error: " + e.getMessage());
+            System.err.println("\nComparison Error: " + e.getMessage());
         } finally {
             scanner.close();
         }
