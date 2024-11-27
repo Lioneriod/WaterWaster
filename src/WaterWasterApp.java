@@ -7,7 +7,7 @@ public class WaterWasterApp {
             PersonWater person = new PersonWater(0);
 
             System.out.println("Answer the following questions about your daily water usage:");
-            System.out.println("1. Do you take a 5-minute shower? (yes/no)");
+            System.out.println("1. Do you usually take 5-minute showers? (yes/no)");
             String shower = scanner.nextLine().trim().toLowerCase();
             if (shower.equals("yes")) {
                 person.addWaste("showering for 5 minutes", 90);

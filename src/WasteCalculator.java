@@ -1,10 +1,10 @@
 class WasteCalculator extends WasteComparator {
     @Override
-    public double compareWaste(double individualWaste, double industrialWaste) throws ComparisonException {
+    public double compareWaste(double personWaste, double industrialWaste) throws ComparisonException {
         if (industrialWaste == 0) {
             throw new ComparisonException("Industrial waste cannot be zero for comparison.");
         }
-        return (individualWaste / industrialWaste) * 100;
+        return (personWaste / industrialWaste) * 100;
     }
 
     @Override
