@@ -40,3 +40,5 @@ A Java program to teach about how much we really impact on water wasting on indi
 
 - Now to find a way to put the last abstract class to use???
 - Check with teacher for more feedback
+- 2 more inheritances
+- Try working on that export thingy
