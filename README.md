@@ -35,8 +35,11 @@ A Java program to teach about how much we really impact on water wasting on indi
 - ~~Change the display and report interfaces to methods I already created on the classes~~
 - ~~More feedback on the terminal about how each choice is adding up~~
 - ~~Add all the items I had on todoist to this list here~~
+- ~~Use the last abstract class~~
+- ~~Get teacher feedback~~
+- ~~Make two more inheritances~~ 
+- ~~Make the report exporter work~~
 
 ###### **To do:**
 
-- Now to find a way to put the last abstract class to use???
-- Check with teacher for more feedback
+- WE'RE DONE!!!

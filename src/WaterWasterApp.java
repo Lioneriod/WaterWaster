@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class WaterWasterApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -57,22 +56,24 @@ public class WaterWasterApp {
             WasteCalculator calculator = new WasteCalculator();
             double percentage = calculator.compareWaste(person.getWaterAmount(), industrial.getWaterAmount());
 
-            System.out.println("\n--- Waste Report ---");
-            System.out.println(person);
-            System.out.println(industrial);
-            System.out.println("Your waste makes up " + String.format("%.2f", percentage) + "% of the daily total waste.");
-            System.out.println("\n\nWorldwide, agriculture alone consumes 70% of the world's freshwater, while households account for around 10%");
-            System.out.println("\nIn Brazil alone, we use up to 7 trillion liters annually, 19 billion per day on agriculture");
-            System.out.println("\nCan you even imagine how much is that? Here in Brazil, half of the water consumption is for the population, the other half is the industry.");
-            System.out.println("\nSure, we use that to make food. But have you ever considered how much is wasted?");
-            System.out.println("\nCassava(Mandioca)? 216% goes to the trash. Corn? 109%. Soy? That one that they burn our forest for? 150%");
-            System.out.println("\nAll this food, that could be used to save people on the street, going into the trash for not being pretty enough");
-            System.out.println("\nAnd we didn't even talk about half of the water used being wasted by lack of maintenance on pipes and water supplies.");
-            System.out.println("\nAnd as an extra, now that water is full of poisonous fluids. And it's going back to you...");
-            System.out.println("\nTaking that 5 min bath ain't gonna do shit. Get up and support some actual causes before it's over\n\n");
+            // Prepare report
+            Yappers yappers = new Yappers();
+            yappers.addSection(person.toString());
+            yappers.addSection(industrial.toString());
+            yappers.addSection("Your waste makes up " + String.format("%.2f", percentage) + "% of the daily total waste.");
+            yappers.addEducationalSection(); // Add the educational information
+
+            // Generate file
+            FinalReport finalReport = new FinalReport(yappers.getReportContent());
+            finalReport.generateReport();
+
+            // Print to console
+            yappers.generateReport();
+
             person.clearWaste();
             industrial.clearWaste();
-            System.out.println("And here's the reset test!\nIndustrial: " + industrial + "\nPerson: " + person);
+
+            System.out.println("Reset Test!\nIndustrial: " + industrial + "\nPerson: " + person);
         } catch (InvalidWasteException e) {
             System.err.println("\nValidation Error: " + e.getMessage());
         } catch (ComparisonException e) {
