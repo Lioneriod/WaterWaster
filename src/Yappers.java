@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 public class Yappers extends ReportGenerator {
     private StringBuilder reportContent;
 
@@ -32,13 +31,3 @@ public class Yappers extends ReportGenerator {
         System.out.println(reportContent);
     }
 }
-=======
-//This one is to print all that big wall of text I made
-public class Yappers extends ReportGenerator {
-
-    @Override
-    public void generateReport() {
-
-    }
-}
->>>>>>> 59f8f0c00d4adae0f9654c9a1ccf22f7ea27d8e1

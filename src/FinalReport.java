@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -21,12 +20,3 @@ public class FinalReport extends ReportGenerator {
         }
     }
 }
-=======
-public class FinalReport extends ReportGenerator{
-
-    @Override
-    public void generateReport() {
-        
-    }
-}
->>>>>>> 59f8f0c00d4adae0f9654c9a1ccf22f7ea27d8e1
