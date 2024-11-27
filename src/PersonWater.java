@@ -2,32 +2,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 class PersonWater extends WaterThing implements Calculate, Addable, Clearable {
-    private List<Double> dailyWaste;
+    private List<Double> wasteList;
 
     public PersonWater(double waterAmount) {
         super(waterAmount);
-        this.dailyWaste = new ArrayList<>();
+        this.wasteList = new ArrayList<>();
     }
 
     @Override
     public void addWaste(double waste) {
-        dailyWaste.add(waste);
+        wasteList.add(waste);
     }
 
-    public void addWaste(String wasteDescription, double wasteAmount) {
-        System.out.println("Adding " + wasteDescription + " with an amount of " + wasteAmount + " liters.");
-        dailyWaste.add(wasteAmount);
+    public void addWaste(String wasteName, double wasteAmount) {
+        System.out.println("Adding " + wasteName + " with an amount of " + wasteAmount + " liters.");
+        wasteList.add(wasteAmount);
     }
 
     @Override
     public void clearWaste() {
-        dailyWaste.clear();
+        wasteList.clear();
         setWaterAmount(0);
     }
 
     @Override
     public double calculateWaste() throws InvalidWasteException {
-        double total = dailyWaste.stream().mapToDouble(Double::doubleValue).sum();
+        double total = wasteList.stream().mapToDouble(Double::doubleValue).sum();
         if (total <= 0) {
             throw new InvalidWasteException("Total waste cannot be zero or negative.");
         }
@@ -42,6 +42,6 @@ class PersonWater extends WaterThing implements Calculate, Addable, Clearable {
 
     @Override
     public String toString() {
-        return super.toString() + ", Daily Waste Records: " + dailyWaste;
+        return super.toString() + ", Daily Waste Records: " + wasteList;
     }
 }
