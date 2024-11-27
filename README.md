@@ -2,7 +2,7 @@
 ## Description
 A Java program to teach about how much we really impact on water wasting on individual actions like "shower of 5min" and so on.
 
-#### Required (By lucas):
+#### Required (By teacher):
 - 3x Abstract Classes 
 - 3x Interfaces
 - 2x Normal Classes
