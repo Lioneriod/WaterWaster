@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class PersonWater extends WaterThing implements Calculate {
+class PersonWater extends WaterThing implements Calculate, Addable, Clearable {
     private List<Double> dailyWaste;
 
     public PersonWater(double waterAmount) {
@@ -9,8 +9,22 @@ class PersonWater extends WaterThing implements Calculate {
         this.dailyWaste = new ArrayList<>();
     }
 
-    public void addDailyWaste(double waste) {
+    @Override
+    public void addWaste(double waste) {
         dailyWaste.add(waste);
+    }
+
+    @Override
+    public void addWaste(double... wastes) { // Overloaded method
+        for (double waste : wastes) {
+            dailyWaste.add(waste);
+        }
+    }
+
+    @Override
+    public void clearWaste() {
+        dailyWaste.clear();
+        setWaterAmount(0);
     }
 
     @Override

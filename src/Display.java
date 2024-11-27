@@ -1,3 +1,0 @@
-interface Display {
-    void displayReport();
-}

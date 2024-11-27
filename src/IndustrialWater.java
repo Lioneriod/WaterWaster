@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-class IndustrialWater extends WaterThing implements Calculate {
+class IndustrialWater extends WaterThing implements Calculate, Addable, Clearable {
     private Set<Double> industrialProcesses;
 
     public IndustrialWater(double waterAmount) {
@@ -9,8 +9,22 @@ class IndustrialWater extends WaterThing implements Calculate {
         this.industrialProcesses = new HashSet<>();
     }
 
-    public void addProcessWaste(double waste) {
+    @Override
+    public void addWaste(double waste) {
         industrialProcesses.add(waste);
+    }
+
+    @Override
+    public void addWaste(double... wastes) { // Overloaded method
+        for (double waste : wastes) {
+            industrialProcesses.add(waste);
+        }
+    }
+
+    @Override
+    public void clearWaste() {
+        industrialProcesses.clear();
+        setWaterAmount(0);
     }
 
     @Override
