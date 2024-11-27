@@ -70,8 +70,6 @@ public class WaterWasterApp {
             System.out.println("\nAnd we didn't even talk about half of the water used being wasted by lack of maintenance on pipes and water supplies.");
             System.out.println("\nAnd as an extra, now that water is full of poisonous fluids. And it's going back to you...");
             System.out.println("\nTaking that 5 min bath ain't gonna do shit. Get up and support some actual causes before it's over\n\n");
-
-            // For this last implement I got no ideas really, I just made a clear method because I heard data is important and whatever
             person.clearWaste();
             industrial.clearWaste();
             System.out.println("And here's the reset test!\nIndustrial: " + industrial + "\nPerson: " + person);

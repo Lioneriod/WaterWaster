@@ -16,5 +16,5 @@ Required (By lucas):
 - Use Collections (one List and a Set or a Map) in at least 2 already created classes
 
 TODO(By me):
-- Find out a way to use the other two interfaces and abstract class lol
+- ~~Find out a way to use the other two interfaces and abstract class lol~~
 - Check with teacher for more feedback
