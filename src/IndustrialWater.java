@@ -14,11 +14,9 @@ class IndustrialWater extends WaterThing implements Calculate, Addable, Clearabl
         industrialProcesses.add(waste);
     }
 
-    @Override
-    public void addWaste(double... wastes) { // Overloaded method
-        for (double waste : wastes) {
-            industrialProcesses.add(waste);
-        }
+    public void addWaste(String wasteDescription, double wasteAmount) {
+        System.out.println("Adding " + wasteDescription + " with an amount of " + wasteAmount + " liters.");
+        industrialProcesses.add(wasteAmount);
     }
 
     @Override

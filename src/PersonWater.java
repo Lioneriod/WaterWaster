@@ -14,11 +14,9 @@ class PersonWater extends WaterThing implements Calculate, Addable, Clearable {
         dailyWaste.add(waste);
     }
 
-    @Override
-    public void addWaste(double... wastes) { // Overloaded method
-        for (double waste : wastes) {
-            dailyWaste.add(waste);
-        }
+    public void addWaste(String wasteDescription, double wasteAmount) {
+        System.out.println("Adding " + wasteDescription + " with an amount of " + wasteAmount + " liters.");
+        dailyWaste.add(wasteAmount);
     }
 
     @Override
