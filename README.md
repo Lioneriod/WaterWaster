@@ -2,6 +2,10 @@
 ## Description
 A Java program to teach about how much we really impact on water wasting on individual actions like "shower of 5min" and so on.
 
+## UML Diagram (Using PlantUML):
+![](./WaterWasterUML.svg)
+
+## Planning of the project:
 #### Required (By teacher):
 - 3x Abstract Classes 
 - 3x Interfaces
